@@ -67,3 +67,6 @@ export const Page = () => {
     </article>
   );
 };
+
+
+export default Page;

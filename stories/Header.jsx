@@ -57,3 +57,6 @@ Header.propTypes = {
 Header.defaultProps = {
   user: null,
 };
+
+
+export default Header;
