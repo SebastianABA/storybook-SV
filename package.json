@@ -4,11 +4,27 @@
   "description": "",
   "typings": "dist/index.d.ts",
   "main": "dist/index.js",
-  
   "release": {
     "branches": [
       "development"
-    ]
+    ],
+    "anaylzeCommits": {
+      "minor": [
+        "feat",
+        "refactor",
+        "test",
+        "revert",
+        "build"
+      ],
+      "patch": [
+        "fix",
+        "perf",
+        "docs",
+        "style",
+        "chore",
+        "ci"
+      ]
+    }
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,8 +35,6 @@
     "copy-files": "copyfiles -u 1 src/**/*.css dist/"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@mui/material": "^5.14.0",
     "react": "16.8.0 || >=18.x",
@@ -31,6 +45,12 @@
     "vite-tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.1",
+    "@semantic-release/npm": "^11.0.1",
+    "@semantic-release/release-notes-generator": "^12.1.0",
     "@storybook/addon-essentials": "^7.0.22",
     "@storybook/addon-interactions": "^7.0.22",
     "@storybook/addon-links": "^7.0.22",
@@ -47,11 +67,24 @@
     "copyfiles": "^2.4.1",
     "prop-types": "^15.8.1",
     "rimraf": "^5.0.1",
+    "semantic-release": "^21.0.7",
     "storybook": "^7.0.22",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
-    "semantic-release": "^21.0.7",
     "vite-plugin-dts": "^3.1.0"
+  },
+  "publishConfig": {
+    "registry": "http://npm.pkg.github.com/abacenters"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SebastianABA/storybook-SV.git"
+  },
+  "homepage": "https://github.com/abacenters/aba-storybook-fe#aba-storybook-fe",
+  "license": "ISC",
+  "author": "ABA centers (Team Nasu)",
+  "bugs": {
+    "url": "https://github.com/abacenters/aba-storybook-fe/issues"
   },
   "plugins": [
     "@semantic-release/commit-analyzer",
@@ -66,4 +99,3 @@
     "react-dom": "16.8.0 || >=18.x"
   }
 }
-
